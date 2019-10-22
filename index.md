@@ -11,8 +11,8 @@ humandate: "November 15, 2019"    # human-readable dates for the workshop (e.g.,
 humantime: "8:30 am - 4:30 pm"    # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
 startdate: 2019-11-15      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
 enddate: 2019-11-15        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
-instructor: ["Arjun Biddanda","Angela Li"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
-helper: ["Shelby Mahaffie"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
+instructor: ["Arjun Biddanda"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
+helper: ["Shelby Mahaffie", "Briana Mittleman"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
 email: ["uccarpentries@gmail.com","abiddanda@uchicago.edu"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
 collaborative_notes:             # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document
 eventbrite: "75737275229"         # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
@@ -473,6 +473,7 @@ please preview your site before committing, and make sure to run
   </div>
 </div> {% comment %} End of 'Git' section. {% endcomment %}
 
+{% comment %}
 <div id="editor"> {% comment %} Start of 'editor' section. {% endcomment %}
   <h3>Text Editor</h3>
 
@@ -537,6 +538,8 @@ please preview your site before committing, and make sure to run
     </div>
   </div>
 </div> {% comment %} End of 'editor' section. {% endcomment %}
+{% endcomment %}
+
 
 {% comment %}
 <div id="python"> {% comment %} Start of 'Python' section. Remove the third paragraph if
