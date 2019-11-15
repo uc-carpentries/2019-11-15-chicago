@@ -286,6 +286,13 @@ please preview your site before committing, and make sure to run
 'tools/check' as well.
 {% endcomment %}
 
+<h2 id="setup">Data</h2>
+
+<p>
+The data that we will be working with can be found at the following link <a href="https://figshare.com/articles/SAFI_Survey_Results/6262019">SAFI_Survey_Results</a>. Make sure to download the cleaned version of the data! 
+
+</p>
+
 <h2 id="setup">Setup</h2>
 
 <p>
