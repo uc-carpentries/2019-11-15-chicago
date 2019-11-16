@@ -293,6 +293,17 @@ The data that we will be working with can be found at the following link <a href
 
 </p>
 
+<h2 id="setup">Resulting Scripts</h2>
+
+<p>
+Throughout our workshop, we generated several pieces of code that may be useful to revisit and we have posted them below:
+
+<ul>
+  <li> <a href="files/project_files/data_types.R">data_types.R</a> </li>
+  <li> <a href="files/project_files/init_data_analysis.R">init_data_analysis.R</a></li>
+</ul>
+</p>
+
 <h2 id="setup">Setup</h2>
 
 <p>
