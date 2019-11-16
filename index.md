@@ -301,8 +301,10 @@ Throughout our workshop, we generated several pieces of code that may be useful 
 <ul>
   <li> <a href="files/project_files/data_types.R">data_types.R</a> </li>
   <li> <a href="files/project_files/init_data_analysis.R">init_data_analysis.R</a></li>
+  <li> <a href="files/project_files/data_viz_ggplot.Rmd">data_viz_ggplot.Rmd</a></li>
 </ul>
 </p>
+
 
 <h2 id="setup">Setup</h2>
 

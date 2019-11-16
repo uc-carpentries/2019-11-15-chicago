@@ -1,0 +1,114 @@
+---
+title: "Data_viz_ggplot"
+author: "Briana Mittleman"
+date: "11/15/2019"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+Load packages: 
+
+```{r}
+library(tidyverse)
+```
+
+
+Load data: 
+
+```{r}
+interviews_plotting <- read_csv("../data/interviews_plotting.csv")
+```
+
+##My first ggplot  
+
+```{r}
+ggplot(data=interviews_plotting, aes(x=no_membrs, y=number_items)) + geom_point()
+```
+
+```{r}
+ggplot(data=interviews_plotting, aes(x=no_membrs, y= number_items)) +
+  geom_point(alpha=0.5)
+```
+
+
+
+```{r}
+ggplot(data=interviews_plotting, aes(x=no_membrs, y=number_items)) +
+  geom_jitter(alpha=0.5)
+```
+
+```{r}
+ggplot(data=interviews_plotting, aes(x=no_membrs, y=number_items)) +
+  geom_jitter(alpha= 0.5, color= "blue")
+```
+
+```{r}
+ggplot(data=interviews_plotting, aes(x=no_membrs, y=number_items))+
+  geom_jitter(aes(color=village), alpha=0.5)
+```
+Exercise: Use what you learned to create a scatter plot of romms by village with the respondent_wall_type showing in different colors. Is this a good way to show this type of data?
+
+
+```{r}
+ggplot(data=interviews_plotting, aes(x=village, y=rooms)) +
+  geom_jitter(aes(color=respondent_wall_type))
+```
+
+##Boxplot  
+
+```{r}
+ggplot(data=interviews_plotting, aes(x=respondent_wall_type, y=rooms))+
+  geom_boxplot(alpha=0) +
+  geom_jitter(alpha=.5, color="tomato")
+```
+Exercise: Change these to violin plots to show density of data. 
+
+```{r}
+ggplot(data=interviews_plotting, aes(x=respondent_wall_type, y=rooms))+
+  geom_violin(alpha=0) +
+  geom_jitter(alpha=.5, color="tomato")
+```
+
+
+```{r}
+ggplot(interviews_plotting, aes(x=respondent_wall_type, y=liv_count)) + 
+  geom_boxplot(alpha=0) +
+  geom_jitter(aes(color=memb_assoc), alpha=.5)
+```
+
+##Adding labels  
+
+```{r}
+ggplot(interviews_plotting, aes(x=respondent_wall_type, y=liv_count)) + 
+  geom_boxplot(alpha=0) +
+  geom_jitter(aes(color=memb_assoc), alpha=.5) +
+  labs(title="People in House by wall type",
+       x="Wall Type",
+       y= "People in House") +
+  scale_color_discrete(name="Association")
+
+```
+Side by side boxplots 
+
+```{r}
+houseplot<-ggplot(interviews_plotting, aes(x=respondent_wall_type, y=liv_count, fill=memb_assoc)) + 
+  geom_boxplot() +
+  geom_jitter(alpha=.5) +
+  labs(title="People in House by wall type",
+       x="Wall Type",
+       y= "People in House") +
+  scale_fill_discrete(name="Association")
+
+houseplot
+```
+
+```{r}
+ggsave("../figs/houseplots.png",houseplot)
+```
+
